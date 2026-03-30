@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Quiz AR</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
-<div id="quiz">
-    <h1 id="question">Chargement...</h1>
-    <div id="answers"></div>
-    <div id="toast"></div>
+<div id="quiz-wrapper">
+
+    <div class="quiz-header">
+        <span class="quiz-title">🎯 Quiz</span>
+        <span id="score-badge">Score : 0</span>
+    </div>
+
+    <div class="progress-wrap">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <!-- ÉCRAN 1 : choix du thème -->
+    <div id="theme-screen">
+        <h2 id="theme-title">Choisissez un thème</h2>
+        <div id="theme-list"></div>
+    </div>
+
+    <!-- ÉCRAN 2 : quiz -->
+    <div id="quiz" style="display:none;">
+        <p id="q-num">Question 1 / 20</p>
+        <h1 id="question">Chargement...</h1>
+        <div id="answers"></div>
+    </div>
+
 </div>
 
+<div id="toast"></div>
 <script src="/static/script.js"></script>
 </body>
 </html>
